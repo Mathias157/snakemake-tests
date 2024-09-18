@@ -1,5 +1,5 @@
 .snakemake
 gurobi.log
-greeting.txt
-intermediate.txt
+carried_message.txt
+message.txt
 

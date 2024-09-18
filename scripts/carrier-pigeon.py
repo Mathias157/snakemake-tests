@@ -1,6 +1,6 @@
 # greet.py
-with open("intermediate.txt", "r") as f:
+with open("message.txt", "r") as f:
     message = f.read()
 
-with open("greeting.txt", "w") as f:
+with open("carried_message.txt", "w") as f:
     f.write(f"The message was: {message}")

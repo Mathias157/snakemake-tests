@@ -3,20 +3,24 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        "greeting.txt"
+        "carried_message.txt"
 
 rule message:
     output:
-        "intermediate.txt"
+        "message.txt"
     params:
         message=config["message"]  # Get message from config file
     shell:
-        'python scripts/message.py --message "{params.message}"'
+        """
+        python scripts/message.py --message "{params.message}" 
+        """
 
 rule messenger:
     input:
-        "intermediate.txt"
+        "message.txt"
     output:
-        "greeting.txt"
+        "carried_message.txt"
     shell:
-        "python scripts/messenger.py"
+        """
+        python scripts/carrier-pigeon.py
+        """
