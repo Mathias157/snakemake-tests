@@ -1,0 +1,5 @@
+.snakemake
+gurobi.log
+greeting.txt
+intermediate.txt
+
